@@ -1,16 +1,16 @@
 def display_board(board):
     """显示棋盘"""
     print("\t{0} | {1} | {2}".format(board[0], board[1], board[2]))
-    print("\t_ | _ | _")
+    print("\t—-+-—-+-—")
     print("\t{0} | {1} | {2}".format(board[3], board[4], board[5]))
-    print("\t_ | _ | _")
+    print("\t—-+-—-+-—")
     print("\t{0} | {1} | {2}".format(board[6], board[7], board[8]))
 
 
 def legal_moves(board):
     """返回可落子的位置列表"""
     moves = []  # 存放的是int类型
-    for i in range(9):
+    for i in range(0, 9):
         if board[i] in list("012345678"):
             moves.append(i)
     return moves
